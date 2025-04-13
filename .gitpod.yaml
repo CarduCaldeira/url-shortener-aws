@@ -1,0 +1,9 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - name: Soundcheck
+    command: aws --version
+
+ports:
+  - 
