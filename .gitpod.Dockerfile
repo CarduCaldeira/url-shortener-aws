@@ -1,7 +1,7 @@
 FROM gitpod/workspace-mysql
 
 ADD https://astral.sh/uv/install.sh /uv-installer.sh
-RUN sh /uv-installer.sh && rm /uv-installer.sh
+RUN sudo sh /uv-installer.sh && rm /uv-installer.sh
 
 ENV PATH="/root/.local/bin/:$PATH"
 RUN uv python install 3.12
