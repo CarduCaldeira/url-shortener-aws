@@ -1,9 +1,6 @@
 FROM gitpod/workspace-mysql
 
-ADD https://astral.sh/uv/install.sh /uv-installer.sh
-RUN sudo sh /uv-installer.sh && rm /uv-installer.sh
-
-ENV PATH="/root/.local/bin/:$PATH"
+RUN curl -fsSL https://astral.sh/uv/install.sh | sh
 RUN uv python install 3.12
 
 RUN bash -c "curl 'https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip' -o 'awscliv2.zip' && unzip awscliv2.zip && sudo ./aws/install"
