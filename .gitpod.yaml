@@ -6,4 +6,5 @@ tasks:
     command: aws --version
 
 ports:
-  - 
+  - port: 3306
+    onOpen: ignore
